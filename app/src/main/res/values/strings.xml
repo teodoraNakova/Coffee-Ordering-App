@@ -15,6 +15,6 @@
     <string name="add_whipped_cream">Please add whipped cream.</string>
     <string name="add_chocolate">Please add chocolate.</string>
     <string name="order_summary_price">Total price: <xliff:g id="price" example="11.50">%s</xliff:g></string>
-    <string name="email">t_nakova_1991@gmail.bg</string>
+    <string name="email"><xliff:g id="email">t_nakova_1991@gmail.bg</xliff:g></string>
     <string name="email_subject">Coffee order for: <xliff:g id="name" example="Tedi">%s</xliff:g></string>
 </resources>

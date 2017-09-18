@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Just Java</string>
+    <string name="add_chocolate">Моля, добавете шоколад.</string>
+    <string name="add_whipped_cream">Моля, добавете сметана.</string>
+    <string name="chocolate">Шоколад</string>
+    <string name="enter_name">Вашето име:</string>
+    <string name="order">Поръчай</string>
+    <string name="order_summary_name">Име: <xliff:g id="name" example="Tedi">%s</xliff:g></string>
+    <string name="order_summary_price">Обща цена: <xliff:g id="price" example="11.50">%s</xliff:g></string>
+    <string name="order_summary_quantity">Брой поръчани кафета: <xliff:g id="quantity" example="2">%d</xliff:g></string>
+    <string name="price">Цена</string>
+    <string name="quantity">Брой</string>
+    <string name="toppings">Топинги</string>
+    <string name="whipped_cream">Сметана</string>
+    <string name="email_subject">Поръчка за: <xliff:g id="name" example="Tedi">%s</xliff:g></string>
+    <string name="email"><xliff:g id="email">t_nakova_1991@gmail.bg</xliff:g></string>
+</resources>
