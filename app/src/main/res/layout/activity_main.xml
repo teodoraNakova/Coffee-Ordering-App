@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:paddingBottom="16dp"
-            android:hint="Enter your name"
+            android:hint="@string/enter_name"
             android:inputType="textCapWords"
             android:imeOptions="actionSend"/>
 
@@ -26,14 +26,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Toppings"
+            android:text="@string/toppings"
             android:textAllCaps="true"/>
 
         <CheckBox
             android:id="@+id/whipped_cream_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Whipped cream"
+            android:text="@string/whipped_cream"
             android:paddingBottom="16dp"
             android:paddingTop="16dp"
             android:paddingLeft="24dp"
@@ -43,7 +43,7 @@
             android:id="@+id/chocolate_checkbox"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Chocolate"
+            android:text="@string/chocolate"
             android:paddingBottom="16dp"
             android:paddingLeft="24dp"
             android:textSize="16sp"/>
@@ -52,7 +52,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Quantity"
+            android:text="@string/quantity"
             android:textAllCaps="true"/>
 
         <LinearLayout
@@ -64,7 +64,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="-"
+                android:text="@string/minus_sign"
                 android:onClick="decrement"/>
 
             <TextView
@@ -80,7 +80,7 @@
             <Button
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:text="+"
+                android:text="@string/plus_sign"
                 android:onClick="increment"/>
 
         </LinearLayout>
@@ -90,7 +90,7 @@
             android:layout_height="wrap_content"
             android:paddingTop="16dp"
             android:textStyle="bold"
-            android:text="Price"
+            android:text="@string/price"
             android:textAllCaps="true"/>
 
         <TextView
@@ -106,7 +106,7 @@
         <Button
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Order"
+            android:text="@string/order"
             android:onClick="submitOrder"/>
 
     </LinearLayout>

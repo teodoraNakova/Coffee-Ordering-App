@@ -64,35 +64,33 @@ public class MainActivity extends AppCompatActivity {
     public void submitOrder(View view) {
         EditText editText = (EditText) findViewById(R.id.name);
         String name = editText.getText().toString();
-        displayOrderCompleteMessage(name);
+        sendOrder(name);
     }
 
-    private void displayOrderCompleteMessage(String name) {
-        StringBuilder orderText = new StringBuilder("Name: " + name + ".\nCoffees ordered: " + quantity + "\n");
+    private void sendOrder(String name) {
+        StringBuilder orderText = new StringBuilder();
+        orderText.append(getString(R.string.order_summary_name, name) + ".\n");
+        orderText.append(getString(R.string.order_summary_quantity, quantity) + ".\n");
         double whippedCreamPrice = 0.5;
         int chocolate = 1;
-        TextView priceTextView = (TextView) findViewById(R.id.price_text_view);
         double totalPrice = calculatePrice();
         if(hasWhippedCream()) {
             totalPrice += whippedCreamPrice;
-            orderText.append("Please add whipped cream.\n");
+            orderText.append(getString(R.string.add_whipped_cream) + "\n");
         }
         if(hasChocolate()) {
             totalPrice += chocolate;
-            orderText.append("Please add chocolate.\n");
+            orderText.append(getString(R.string.add_chocolate) + "\n");
         }
-        orderText.append("Total price: " + NumberFormat.getCurrencyInstance().format(totalPrice));
+        orderText.append(getString(R.string.order_summary_price, NumberFormat.getCurrencyInstance().format(totalPrice)));
         Intent intent = new Intent(Intent.ACTION_SENDTO);
         intent.setData(Uri.parse("mailto:")); // only email apps should handle this
-        intent.putExtra(Intent.EXTRA_EMAIL, "t_nakova_1991@gmail.bg");
-        intent.putExtra(Intent.EXTRA_SUBJECT, "Coffee order for " + name);
+        intent.putExtra(Intent.EXTRA_EMAIL, getString(R.string.email));
+        intent.putExtra(Intent.EXTRA_SUBJECT, getString(R.string.email_subject, name));
         intent.putExtra(Intent.EXTRA_TEXT, orderText.toString());
         if (intent.resolveActivity(getPackageManager()) != null) {
             startActivity(intent);
         }
-
-        priceTextView.setText("Thank you " + name + "!\nYou ordered " + quantity + " coffees.\nTotal amount: "
-                + NumberFormat.getCurrencyInstance().format(totalPrice));
     }
 
 }
