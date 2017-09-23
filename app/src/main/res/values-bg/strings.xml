@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Just Java</string>
+    <string name="app_name">Coffee Time</string>
     <string name="add_chocolate">Моля, добавете шоколад.</string>
     <string name="add_whipped_cream">Моля, добавете сметана.</string>
     <string name="chocolate">Шоколад</string>
